@@ -3,6 +3,10 @@
 #include "OpenCLManager.hpp"
 #include "HelperFunctions.hpp"
 #include <iostream>
+#include "level-set-segmentation-config.h"
+
+#include "OulConfig.hpp"
+
 using namespace std;
 
 void visualize(SIPL::Volume<float> * input, SIPL::Volume<char> * seg, float level, float window) {
@@ -48,7 +52,9 @@ int main(int argc, char ** argv) {
                 atoi(argv[6]),
                 atof(argv[7]),
                 atof(argv[8]),
-                atof(argv[9])
+                atof(argv[9]),
+                KERNELS_DIR,
+                OUL_DIR
         );
 
         // Write to disk

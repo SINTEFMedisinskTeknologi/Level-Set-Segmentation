@@ -66,5 +66,5 @@ configure_file (
 
 configure_file(
  "${PROJECT_SOURCE_DIR}/CMake/level-set-segmentation-config.h.in"
- "${PROJECT_BINARY_DIR}/config.h"
+ "${PROJECT_BINARY_DIR}/level-set-segmentation-config.h"
 )

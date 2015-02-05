@@ -10,7 +10,9 @@ SIPL::Volume<char> * runLevelSet(
         int iterations,
         float threshold,
         float epsilon,
-        float alpha
+        float alpha,
+        std::string kernel_dir,
+        std::string oul_dir
 );
 
 
