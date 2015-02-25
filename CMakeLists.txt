@@ -10,7 +10,6 @@ cmake_minimum_required(VERSION 2.8)
 #------------------------------------------------------------------------------
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O3")
 
-
 #------------------------------------------------------------------------------
 # External libraries
 #------------------------------------------------------------------------------
@@ -34,10 +33,10 @@ include_directories(${PROJECT_BINARY_DIR})
 # Targets
 #------------------------------------------------------------------------------
 add_executable(levelSetSeg main.cpp levelSet.cpp)
-target_link_libraries(levelSetSeg SIPL OpenCLUtilityLibrary OpenCL)
+target_link_libraries(levelSetSeg SIPL OpenCLUtilityLibrary ${OPENCL_LIBRARIES})
 
 add_library(levelSetSegLib levelSet.cpp)
-target_link_libraries(levelSetSegLib SIPL OpenCLUtilityLibrary)
+target_link_libraries(levelSetSegLib SIPL OpenCLUtilityLibrary ${OPENCL_LIBRARIES})
 
 #------------------------------------------------------------------------------
 # Configure file for find_package module 
